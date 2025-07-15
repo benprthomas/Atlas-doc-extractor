@@ -13,7 +13,7 @@ async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function adoptionAgreementModel() {
+async function adoptionAgreementModel(base64String) {
   console.log("StaringAdoptionModel ...");
 
   const key = process.env.AZURE_API_KEY;
@@ -58,7 +58,7 @@ async function adoptionAgreementModel() {
       throw new Error("Analysis failed");
     }
 
-    await sleep(2000); // wait 2 seconds before polling again
+    await sleep(5000); // wait 2 seconds before polling again
   }
 
   if (!result) throw new Error("Timed out waiting for Azure model result");
@@ -68,8 +68,9 @@ async function adoptionAgreementModel() {
     throw new Error("No document returned from Azure");
   }
 
-  // console.log("Result : " + JSON.stringify(document.fields, null, 2));
+  console.log("Result : " + JSON.stringify(document.fields, null, 2));
   const dataIdentified = extractValue(document);
+  // console.log("Dataidentified : " + JSON.stringify(dataIdentified, null, 2));
 
   return dataIdentified;
 }

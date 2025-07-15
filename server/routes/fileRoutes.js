@@ -6,7 +6,7 @@ const router = express.Router();
 
 const adoptionAgreementModel = require("../models/adoptionAgreement");
 
-// Temporary local upload
+// Use disk storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const uploadDir = "./uploads";
@@ -20,15 +20,21 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post("/upload", upload.single("file"), async (req, res) => {
-  const filePath = path.resolve(req.file.path);
+  try {
+    const filePath = req.file.path;
+    const fileBuffer = fs.readFileSync(filePath);
+    const base64 = fileBuffer.toString("base64");
 
-  const result = await adoptionAgreementModel();
-
-  res.json({
-    message: "File uploaded successfully",
-    path: filePath,
-    result: result,
-  });
+    const fields = await adoptionAgreementModel(base64);
+    res.status(200).json({
+      success: true,
+      message: "File uploaded and processed successfully",
+      fields,
+    });
+  } catch (err) {
+    console.error("Azure model error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
 });
 
 module.exports = router;

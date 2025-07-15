@@ -39,12 +39,15 @@ function dataExtraction(field) {
 function extractValue(document) {
   const extracted = {};
 
-  for (const [key, field] of Object.entries(document.fields)) {
-    extracted[key] = {
-      value: dataExtraction(field),
-      confidence: field.confidence ?? null,
-    };
+  if (document.fields) {
+    Object.entries(document.fields).forEach(([key, field]) => {
+      (extracted[key] = key),
+        (extracted["value"] = extractValue(field)),
+        (extracted["confidence"] = field.confidence);
+    });
   }
+
+  // console.log("Extracted : " + JSON.stringify(extracted, null, 2));
 
   return extracted;
 }
