@@ -5,6 +5,7 @@ const DocumentIntelligence =
     isUnexpected,
   } = require("@azure-rest/ai-document-intelligence");
 
+const axios = require("axios");
 const { AzureKeyCredential } = require("@azure/core-auth");
 require("dotenv").config({ path: "../.env" });
 const extractValue = require("./extractValue");
@@ -13,8 +14,14 @@ async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function adoptionAgreementModel(base64String) {
+async function downloadPdfToBuffer(blobUrl) {
+  const response = await axios.get(blobUrl, { responseType: "arraybuffer" });
+  return response.data;
+}
+
+async function adoptionAgreementModel(blobUrl) {
   console.log("StaringAdoptionModel ...");
+  console.log(blobUrl);
 
   const key = process.env.AZURE_API_KEY;
   const endpoint = process.env.AZURE_ENDPOINT;
@@ -22,17 +29,14 @@ async function adoptionAgreementModel(base64String) {
 
   console.log("Getting Key : " + key + endpoint);
 
-  const formUrl =
-    "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/sample-layout.pdf";
-
   // Step 1: Submit document
+  const pdfBuffer = await downloadPdfToBuffer(blobUrl);
+
   const initialResponse = await client
     .path("/documentModels/{modelId}:analyze", "adoption_agreement_model")
     .post({
-      contentType: "application/json",
-      body: {
-        urlSource: formUrl,
-      },
+      contentType: "application/pdf",
+      body: pdfBuffer,
     });
 
   if (isUnexpected(initialResponse)) {
@@ -68,7 +72,6 @@ async function adoptionAgreementModel(base64String) {
     throw new Error("No document returned from Azure");
   }
 
-  console.log("Result : " + JSON.stringify(document.fields, null, 2));
   const dataIdentified = extractValue(document);
   // console.log("Dataidentified : " + JSON.stringify(dataIdentified, null, 2));
 
