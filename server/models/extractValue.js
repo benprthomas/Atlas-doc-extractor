@@ -1,5 +1,5 @@
 function dataExtraction(field) {
-  if (field == null) return null;
+  if (!field) return null;
 
   switch (field.type) {
     case "string":
@@ -8,18 +8,18 @@ function dataExtraction(field) {
       return field.value ?? field.content ?? null;
 
     case "selectionMark":
-      return field.state === "selected" ? true : false;
+      return field.content ? field.content.slice(1, -1) : "";
 
     case "array":
       return (field.valueArray ?? []).map((item) => {
         if (item.type === "object" && item.valueObject) {
           const row = {};
           for (const [colKey, cell] of Object.entries(item.valueObject)) {
-            row[colKey] = extractValue(cell);
+            row[colKey] = dataExtraction(cell);
           }
           return row;
         } else {
-          return extractValue(item);
+          return dataExtraction(item);
         }
       });
 
@@ -27,7 +27,7 @@ function dataExtraction(field) {
       return Object.fromEntries(
         Object.entries(field.valueObject ?? {}).map(([key, val]) => [
           key,
-          extractValue(val),
+          dataExtraction(val),
         ])
       );
 
@@ -40,14 +40,13 @@ function extractValue(document) {
   const extracted = {};
 
   if (document.fields) {
-    Object.entries(document.fields).forEach(([key, field]) => {
-      (extracted[key] = key),
-        (extracted["value"] = extractValue(field)),
-        (extracted["confidence"] = field.confidence);
-    });
+    for (const [key, field] of Object.entries(document.fields)) {
+      extracted[key] = {
+        value: dataExtraction(field),
+        confidence: field.confidence,
+      };
+    }
   }
-
-  // console.log("Extracted : " + JSON.stringify(extracted, null, 2));
 
   return extracted;
 }

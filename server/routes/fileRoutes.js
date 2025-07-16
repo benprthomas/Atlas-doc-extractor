@@ -5,8 +5,8 @@ const fs = require("fs");
 const router = express.Router();
 
 const adoptionAgreementModel = require("../models/adoptionAgreement");
+const { uploadFileToBlob, uploadJsonToBlob } = require("../utils/blobService");
 
-// Use disk storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const uploadDir = "./uploads";
@@ -21,14 +21,20 @@ const upload = multer({ storage });
 
 router.post("/upload", upload.single("file"), async (req, res) => {
   try {
-    const filePath = req.file.path;
-    const fileBuffer = fs.readFileSync(filePath);
-    const base64 = fileBuffer.toString("base64");
+    const localPath = req.file.path;
+    const blobUrl = await uploadFileToBlob(localPath, "raw");
 
-    const fields = await adoptionAgreementModel(base64);
+    const fields = await adoptionAgreementModel(blobUrl);
+
+    const jsonBlobName = `extracted/${Date.now()}-${
+      req.file.originalname
+    }.json`;
+    const resultBlobUrl = await uploadJsonToBlob(fields, jsonBlobName);
+
     res.status(200).json({
       success: true,
-      message: "File uploaded and processed successfully",
+      fileUrl: blobUrl,
+      resultUrl: resultBlobUrl,
       fields,
     });
   } catch (err) {
