@@ -1,0 +1,168 @@
+{
+  "PD.General_G9": {
+    "field": "name_of_plan"
+  },
+  "PD.General_G10": {
+    "field": "employer_name"
+  },
+  "PD.General_G11": {
+    "field": "employer_tax_identification_number"
+  },
+  "PD.General_G12": {
+    "field": "three_digit_plan_number"
+  },
+  "PD.General_G13": {
+    "field": "three_digit_plan_number"
+  },
+
+  "PD.C1_G10": {
+    "field": "attained_age"
+  },
+  "PD.C1_G11": {
+    "type": "table",
+    "mline": false,
+    "field": "table_eligibility_service_requirement"
+  },
+  "PD.C1_G12": {
+    "type": "table",
+    "mline": false,
+    "field": "table_entry_dates"
+  },
+  "PD.C1_G17": {
+    "type": "selection_mark",
+    "field": "cbox_excluded_class_of_employees",
+    "child": [
+      "cbox_collective_bargaining_agreement",
+      "cbox_highly_compensated_employees",
+      "cbox_leased_employees",
+      "cbox_nonresident_aliens",
+      "cbox_temporary_employees"
+    ]
+  },
+  "PD.C1_G21": {
+    "type": "selection_mark",
+    "field": "n/a",
+    "child": [
+      "cbox_compensation_base_w2",
+      "cbox_compensation_base_code_section_3401",
+      "cbox_compensation_base_415",
+      "cbox_additional_alterations_reimbursements",
+      "cbox_additional_alterations_differential_wages",
+      "cbox_additional_alterations_unused_leave",
+      "cbox_additional_alterations_overtime_pay",
+      "cbox_additional_alterations_bonuses",
+      "cbox_additional_alterations_commissions",
+      "cbox_additional_alterations_restricted_stock",
+      "cbox_additional_alterations_severance",
+      "cbox_additional_alterations_amounts_paid",
+      "cbox_additional_alterations_other"
+    ]
+  },
+  "PD.C1_G44": {
+    "type": "selection_mark",
+    "field": "cbox_catch_up_matching_contributions",
+    "child": []
+  },
+  "PD.C1_G45": {
+    "field": "max_deferral_contribution"
+  },
+  "PD.C1_G47": {
+    "type": "selection_mark",
+    "field": "n/a",
+    "child": [
+      "cbox_frequency_deferral_payroll_period",
+      "cbox_frequency_deferral_each_month",
+      "cbox_frequency_deferral_entry_date",
+      "cbox_frequency_deferral_each_quarter",
+      "cbox_frequency_deferral_each_year",
+      "cbox_frequency_deferral_other"
+    ]
+  },
+  "PD.C1_G48": {
+    "type": "selection_mark",
+    "field": "cbox_automatic_enrollment_contributions",
+    "child": []
+  },
+  "PD.C1_G56": {
+    "type": "selection_mark",
+    "field": "cbox_roth_contributions",
+    "child": []
+  },
+
+  "PD.D1_G10": {
+    "type": "selection_mark",
+    "field": "cbox_inservice_withdrawals_hardship",
+    "child": []
+  },
+  "PD.D1_G11": {
+    "type": "selection_mark",
+    "field": "cbox_inservice_withdrawls_age59",
+    "child": []
+  },
+  "PD.D1_G12": {
+    "type": "selection_mark",
+    "field": "n/a",
+    "child": [
+      "cbox_inservice_withdrawals_employee_contributions",
+      "cbox_inservice_withdrawals_rollover_contributions",
+      "cbox_inservice_withdrawals_active_military_distribution"
+    ]
+  },
+  "PD.D1_G22": {
+    "type": "selection_mark",
+    "field": "cbox_loan_required_hardship",
+    "child": []
+  },
+  "PD.D1_G23": {
+    "field": "allowable_sources_hardship"
+  },
+  "PD.D1_G24": {
+    "type": "selection_mark",
+    "field": "cbox_earning_exluded_hardship",
+    "child": []
+  },
+  "PD.D1_G34": {
+    "type": "table",
+    "mline": false,
+    "field": "table_eligibility_service_requirement"
+  },
+  "PD.D1_G35": {
+    "type": "special",
+    "field1": "cbox_mandatory_cach_out_dollar_1000",
+    "field2": "cbox_mandatory_cach_out_dollar_specified",
+    "field3": "mandatory_cash_out_dollar_value"
+  },
+  "PD.D1_G36": {
+    "field": "lump_sum_payments"
+  },
+  "PD.D1_G37": {
+    "type": "selection_mark",
+    "field": "cbox_forms_distributions_annuities",
+    "child": []
+  },
+  "PD.D1_G38": {
+    "type": "selection_mark",
+    "field": "cbox_forms_distributions_installment_payments",
+    "child": []
+  },
+  "PD.D1_G39": {
+    "type": "selection_mark",
+    "field": "cbox_forms_distributions_partial_withdrawals",
+    "child": []
+  },
+  "PD.E1_G9": {
+    "type": "selection_mark",
+    "field": "cbox_participant_loans",
+    "child": []
+  },
+  "PD.E1_G11": {
+    "type": "selection_mark",
+    "field": "cbox_loan_required_hardship",
+    "child": []
+  },
+  "PD.F1_G9": {
+    "type": "selection_mark",
+    "field": "cbox_rollover_contributions",
+    "child": []
+  }
+}
