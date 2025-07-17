@@ -4,8 +4,11 @@ const path = require("path");
 const fs = require("fs");
 const router = express.Router();
 
-const adoptionAgreementModel = require("../models/adoptionAgreement");
-const { uploadFileToBlob, uploadJsonToBlob } = require("../utils/blobService");
+const {
+  uploadFileToBlob,
+  uploadJsonToBlob,
+} = require("../blobStorage/blobService");
+const useDocumentModel = require("../models/useModel");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -24,7 +27,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     const localPath = req.file.path;
     const blobUrl = await uploadFileToBlob(localPath, "raw");
 
-    const fields = await adoptionAgreementModel(blobUrl);
+    const fields = await useDocumentModel(blobUrl, "adoption_agreement_model");
 
     const jsonBlobName = `extracted/${Date.now()}-${
       req.file.originalname

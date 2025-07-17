@@ -8,6 +8,7 @@ const DocumentIntelligence =
 const axios = require("axios");
 const { AzureKeyCredential } = require("@azure/core-auth");
 require("dotenv").config({ path: "../.env" });
+
 const extractValue = require("./extractValue");
 
 async function sleep(ms) {
@@ -19,8 +20,8 @@ async function downloadPdfToBuffer(blobUrl) {
   return response.data;
 }
 
-async function adoptionAgreementModel(blobUrl) {
-  console.log("StaringAdoptionModel ...");
+async function useDocumentModel(blobUrl, modelType) {
+  console.log(modelType + " staring ...");
   console.log(blobUrl);
 
   const key = process.env.AZURE_API_KEY;
@@ -33,7 +34,7 @@ async function adoptionAgreementModel(blobUrl) {
   const pdfBuffer = await downloadPdfToBuffer(blobUrl);
 
   const initialResponse = await client
-    .path("/documentModels/{modelId}:analyze", "adoption_agreement_model")
+    .path("/documentModels/{modelId}:analyze", modelType)
     .post({
       contentType: "application/pdf",
       body: pdfBuffer,
@@ -73,9 +74,9 @@ async function adoptionAgreementModel(blobUrl) {
   }
 
   const dataIdentified = extractValue(document);
-  // console.log("Dataidentified : " + JSON.stringify(dataIdentified, null, 2));
+  console.log("Dataidentified : " + JSON.stringify(dataIdentified, null, 2));
 
   return dataIdentified;
 }
 
-module.exports = adoptionAgreementModel;
+module.exports = useDocumentModel;
