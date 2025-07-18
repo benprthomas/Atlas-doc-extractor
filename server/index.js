@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const fileRoutes = require("./routes/fileRoutes");
-const modelRoutes = require("./routes/modelRoutes");
+const fileRoutes = require("./routes/file.routes");
+const modelRoutes = require("./routes/model.routes");
 
 dotenv.config();
 

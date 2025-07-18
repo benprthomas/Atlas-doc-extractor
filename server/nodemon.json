@@ -1,12 +1,12 @@
 {
   "watch": [
     "index.js",
-    "routes",
-    "models",
+    "config",
+    "features",
     "utils",
-    "blobStorage",
-    "extracted",
-    "prisma"
+    "infrastructure",
+    "prisma",
+    "routes"
   ],
   "ext": "js,json",
   "ignore": ["node_modules"]

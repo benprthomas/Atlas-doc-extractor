@@ -6,7 +6,7 @@ const {
   SASProtocol,
 } = require("@azure/storage-blob");
 
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config({ path: "../config/.env" });
 
 const accountName = process.env.AZURE_STORAGE_ACCOUNT;
 const accountKey = process.env.AZURE_STORAGE_KEY;

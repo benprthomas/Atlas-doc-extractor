@@ -9,7 +9,7 @@ const axios = require("axios");
 const { AzureKeyCredential } = require("@azure/core-auth");
 require("dotenv").config({ path: "../.env" });
 
-const extractValue = require("./extractValue");
+const extractValue = require("./extract.value");
 
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -21,7 +21,7 @@ async function downloadPdfToBuffer(blobUrl) {
 }
 
 async function useDocumentModel(blobUrl, modelType) {
-  console.log(modelType + " staring ...");
+  console.log(modelType + " starting ...");
   console.log(blobUrl);
 
   const key = process.env.AZURE_API_KEY;

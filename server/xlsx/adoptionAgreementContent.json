@@ -1,0 +1,74 @@
+{
+  "cbox_collective_bargaining_agreement": {
+    "value": "employees covered by a collective bargaining agreement,",
+    "confidence": 0.988
+  },
+  "cbox_highly_compensated_employees": {
+    "value": "Highly Compensated Employees",
+    "confidence": 0.976
+  },
+  "cbox_leased_employees": {
+    "value": "Leased Employees",
+    "confidence": 0.982
+  },
+  "cbox_nonresident_aliens": {
+    "value": "nonresident aliens",
+    "confidence": 0.985
+  },
+  "cbox_compensation_base_w2": {
+    "value": "W-2",
+    "confidence": 0.988
+  },
+  "cbox_compensation_base_code_section_3401": {
+    "value": "Code Section 3401(a) wages",
+    "confidence": 0.987
+  },
+  "cbox_compensation_base_415": {
+    "value": "Code Section 415",
+    "confidence": 0.975
+  },
+  "cbox_compensation_entire_plan_year": {
+    "value": "Compensation for the entire Plan Year.",
+    "confidence": 0.984
+  },
+  "cbox_compensation_entire_short_initial": {
+    "value": "For purposes of determining the amount of Nonelective Employer Contributions, other than 401(k) Safe Harbor Nonelective Employer Contributions, Compensation for the 12-month period ending on the last day of the initial Plan Year shall be used.",
+    "confidence": 0.985
+  },
+  "cbox_compensation_only_portion": {
+    "value": "Only Compensation for the portion of the Plan Year in which the Employee is eligible to participate in the Plan.",
+    "confidence": 0.984
+  },
+  "cbox_compensation_only_short": {
+    "value": "For purposes of determining the amount of Nonelective Employer Contributions, other than 401(k) Safe Harbor Nonelective Employer Contributions, for those Employees who become Active Participants on the original effective date of the Plan, Compensation for the 12-month period ending on the last day of the initial Plan Year shall be used. For all other Employees, only Compensation for the period in which they are eligible shall be used.",
+    "confidence": 0.98
+  },
+  "cbox_frequency_deferral_payroll_period": {
+    "value": "beginning of each payroll period.",
+    "confidence": 0.987
+  },
+  "cbox_frequency_deferral_each_month": {
+    "value": "first day of each month.",
+    "confidence": 0.987
+  },
+  "cbox_frequency_deferral_entry_date": {
+    "value": "each Entry Date.",
+    "confidence": 0.975
+  },
+  "cbox_frequency_deferral_each_quarter": {
+    "value": "first day of each calendar quarter.",
+    "confidence": 0.987
+  },
+  "cbox_frequency_deferral_each_plan_year": {
+    "value": "first day of each Plan Year.",
+    "confidence": 0.972
+  },
+  "cbox_frequency_deferral_other": {
+    "value": "other.",
+    "confidence": 0.988
+  },
+  "cbox_predecessor_employer_service": {
+    "value": "Healthcare Research Consulting Group, LLC",
+    "confidence": 0.989
+  }
+}
