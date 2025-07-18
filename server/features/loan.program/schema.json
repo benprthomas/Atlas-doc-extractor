@@ -1,0 +1,20 @@
+{
+  "PD.E1_G10": {
+    "field": "minimum_loan_amount"
+  },
+  "PD.E1_G13": {
+    "field": "number_loans_allowed"
+  },
+  "PD.E1_G14": {
+    "field": "length_loan_general_purpose"
+  },
+  "PD.E1_G15": {
+    "field": "length_loan_primary_residence"
+  },
+  "PD.E1_G16": {
+    "field": "allowable_sources_loans"
+  },
+  "PD.E1_G17": {
+    "field": "interest_rate_determined"
+  }
+}

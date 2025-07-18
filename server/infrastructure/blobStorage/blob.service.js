@@ -5,8 +5,11 @@ const {
   BlobSASPermissions,
 } = require("@azure/storage-blob");
 const { v4: uuidv4 } = require("uuid");
-require("dotenv").config("../.env");
+
 const path = require("path");
+require("dotenv").config({
+  path: path.resolve(__dirname, "../../config/.env"),
+});
 
 const account = process.env.AZURE_STORAGE_ACCOUNT_NAME;
 const accountKey = process.env.AZURE_STORAGE_ACCOUNT_KEY;

@@ -1,0 +1,14 @@
+{
+  "PD.C1_G49": {
+    "field": "auto_enrollment"
+  },
+  "PD.C1_G50": {
+    "field": "notification_period"
+  },
+  "PD.C1_G53": {
+    "field": "auto_escalation"
+  },
+  "PD.C1_G54": {
+    "field": "auto_escalation_cap"
+  }
+}

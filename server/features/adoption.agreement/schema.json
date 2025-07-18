@@ -45,7 +45,13 @@
     "child": [
       "cbox_compensation_base_w2",
       "cbox_compensation_base_code_section_3401",
-      "cbox_compensation_base_415",
+      "cbox_compensation_base_415"
+    ]
+  },
+  "PD.C1_G25": {
+    "type": "selection_mark",
+    "field": "n/a",
+    "child": [
       "cbox_additional_alterations_reimbursements",
       "cbox_additional_alterations_differential_wages",
       "cbox_additional_alterations_unused_leave",

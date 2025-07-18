@@ -1,0 +1,26 @@
+{
+  "minimum_loan_amount": {
+    "value": "$1,000.",
+    "confidence": 0.971
+  },
+  "length_loan_general_purpose": {
+    "value": "five years",
+    "confidence": 0.958
+  },
+  "length_loan_primary_residence": {
+    "value": "10 years",
+    "confidence": 0.962
+  },
+  "number_loans_allowed": {
+    "value": "1",
+    "confidence": 0.836
+  },
+  "interest_rate_determined": {
+    "value": "prime rate plus 1",
+    "confidence": 0.865
+  },
+  "allowable_sources_loans": {
+    "value": "The Employer may provide that loans only be made from certain sub-accounts within Participant Account(s) by notifying Fidelity in writing of the restricted sub-account.",
+    "confidence": 0.813
+  }
+}

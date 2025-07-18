@@ -1,0 +1,130 @@
+{
+  "automatic_enrollment_effective_date": {
+    "value": "05/01/2022",
+    "confidence": 0.975
+  },
+  "cbox_same_auto_enroll_apply": {
+    "value": "selected",
+    "confidence": 0.972
+  },
+  "cbox_different_auto_enroll_apply": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "auto_enrollment": {
+    "value": "6.00%",
+    "confidence": 0.978
+  },
+  "cbox_auto_enroll_date_of_hire": {
+    "value": "selected",
+    "confidence": 0.973
+  },
+  "cbox_auto_enroll_no_deferral": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_enroll_rehire": {
+    "value": "selected",
+    "confidence": 0.973
+  },
+  "cbox_auto_enroll_not_rehire": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_enroll_based_eligibility_date": {
+    "value": "selected",
+    "confidence": 0.973
+  },
+  "cbox_auto_enroll_based_hire_date": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "notification_period": {
+    "value": "35 days",
+    "confidence": 0.958
+  },
+  "auto_aip_effective_date": {
+    "value": "05/01/2022",
+    "confidence": 0.968
+  },
+  "auto_escalation": {
+    "value": "1.00%",
+    "confidence": 0.976
+  },
+  "auto_escalation_cap": {
+    "value": "10.00%.",
+    "confidence": 0.976
+  },
+  "cbox_auto_aip_increase_pre_tax": {
+    "value": "unselected",
+    "confidence": 0.968
+  },
+  "cbox_auto_aip_increase_unless": {
+    "value": "selected",
+    "confidence": 0.968
+  },
+  "cbox_auto_aip_annual_increase": {
+    "value": "selected",
+    "confidence": 0.967
+  },
+  "auto_escalation_effective_date": {
+    "value": "01/01",
+    "confidence": 0.975
+  },
+  "cbox_auto_aip_date_hire_increase": {
+    "value": "unselected",
+    "confidence": 0.967
+  },
+  "cbox_auto_aip_increase_auto_enrolled": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_increase_no_skip": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_increase_skip": {
+    "value": "selected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_cap": {
+    "value": "selected",
+    "confidence": 0.965
+  },
+  "cbox_auto_aip_cap_apply_all": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_cap_apply_auto_enrolled": {
+    "value": "selected",
+    "confidence": 0.971
+  },
+  "cbox_auto_aip_reinstatement": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_reinstatement_missed": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_reinstatement_absense": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "cbox_auto_aip_reinstatement_suspension": {
+    "value": "unselected",
+    "confidence": 0.973
+  },
+  "automatic_enrollment_fidelity_date": {
+    "value": "05/01/2022.",
+    "confidence": 0.977
+  },
+  "cbox_same_auto_aip_settings_apply": {
+    "value": "selected",
+    "confidence": 0.94
+  },
+  "cbox_diff_auto_aip_settings_apply": {
+    "value": "unselected",
+    "confidence": 0.941
+  }
+}
