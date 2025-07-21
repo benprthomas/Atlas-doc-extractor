@@ -11,10 +11,6 @@
   "PD.General_G12": {
     "field": "three_digit_plan_number"
   },
-  "PD.General_G13": {
-    "field": "three_digit_plan_number"
-  },
-
   "PD.C1_G10": {
     "field": "attained_age"
   },

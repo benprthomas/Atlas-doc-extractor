@@ -47,7 +47,7 @@ function App() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:5000/api/actions/generate"
+        "http://localhost:5000/api/actions/excelGenerate"
       );
       setStatus("Generation Success");
     } catch (error) {
